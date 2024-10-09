@@ -1,0 +1,15 @@
+{% extends "../base.html" %}
+
+{% block content %}
+<div class="login-block">
+    <form action="{{ url['LoginPage'] }}" method="POST">
+        <h2>Вход в аккаунт</h2>
+        <input class="form-control" type="text" name="email" placeholder="Почта">
+        <input class="form-control" type="password" name="password" placeholder="Пароль">
+        <div class="d-flex align-items-center">
+            <button class="btn fs-5" type="submit">Войти</button>
+        </div>
+        <small><a href="{{ url['RegisterPage'] }}">Зарегистрируйтесь</a>, если нет аккаунта</small>
+    </form>
+</div>
+{% endblock %}

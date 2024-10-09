@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/static/css/style.css" rel="stylesheet">
+    <link href="/static/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <title>{{ title }}</title>
+</head>
+<body>
+    <div id="header">
+        <div class="navbar navbar-expand-lg">
+            <div class="container-fluid px-5">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-between" id="navbarNavAltMarkup">
+                    <a class="navbar-brand fs-1 f-150" href="{{ url['IndexPage'] }}">Journal</a>
+                    <div class="navbar-nav">
+                        <a class="nav-link" href="{{ url['IndexPage'] }}">Главная</a>
+                        <a class="nav-link ms-5" href="{{ url['IndexPage'] }}">Дневник</a>
+                        <a class="nav-link ms-5" href="{{ url['IndexPage'] }}">Оценки</a>
+                    </div>
+                    <div class="navbar-nav">
+                        <a class="nav-link f-150" href="{{ url['LoginPage'] }}">Войти</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <div id="main">
+        <div class="container-xl">
+            {% block content %}
+            {% endblock %}
+        </div>
+    </div>
+    <script src="/static/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
